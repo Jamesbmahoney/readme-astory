@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-
 const generatePage = require('./utils/generatedMarkdown.js');
 
 // TODO: Create an array of questions for user input
@@ -36,7 +35,7 @@ const questions = () =>{
         {
             type: 'input',
             name: 'install',
-            message: 'What are the steps required to install your project?',
+            message: 'Write a detailed list of required steps to install project',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -62,7 +61,7 @@ const questions = () =>{
         {
             type: 'input',
             name: 'contributors',
-            message: 'Who were your collaborators (List if any, otherwise leave blank'
+            message: 'Who were your collaborators (List if any, otherwise leave blank)'
         },
         {
             type: 'list',
@@ -81,11 +80,13 @@ const questions = () =>{
     ])
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+questions();
 
-// TODO: Create a function to initialize app
-function init() {}
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
 
-// Function call to initialize app
-init();
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();
