@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const generatePage = require('./utils/generatedMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = () =>{
+const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -15,7 +15,7 @@ const questions = () =>{
                     return true;
                 } else {
                     console.log('Please enter your project name!');
-                    return false; 
+                    return false;
                 }
             }
         },
@@ -28,7 +28,7 @@ const questions = () =>{
                     return true;
                 } else {
                     console.log('Please enter a description of your project!');
-                    return false; 
+                    return false;
                 }
             }
         },
@@ -41,7 +41,7 @@ const questions = () =>{
                     return true;
                 } else {
                     console.log('Please enter steps required to install your project!');
-                    return false; 
+                    return false;
                 }
             }
         },
@@ -54,7 +54,7 @@ const questions = () =>{
                     return true;
                 } else {
                     console.log('Please enter detail description of use!');
-                    return false; 
+                    return false;
                 }
             }
         },
@@ -67,26 +67,47 @@ const questions = () =>{
             type: 'list',
             name: 'license',
             message: 'What kind of license should your project have?',
-            choices: ['Apache', 'Wordpress', 'npm packages', 'Rust', 'GNU'],            
+            choices: ['Apache', 'Wordpress', 'npm packages', 'Rust', 'GNU'],
             validate: nameInput => {
                 if (nameInput) {
                     return true;
                 } else {
                     console.log('Please choose a license!');
-                    return false; 
+                    return false;
                 }
             }
-        }, 
+        },
     ])
+
 };
 
-questions();
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// TODO: Create a function to write README file
+const writeFile = data => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('README.md', data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File Created!'
+            });
+        });
+    });
+};
 
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
+// TODO: Create a function to initialize app
+questions()
+    .then(answers => {
+        return generatePage(answers);
+    })
+    .then(data => {
+        return writeFile(data);
+    })
+    .catch(err => {
+        console.log(err)
+    })
+ // Function call to initialize app
 // init();
