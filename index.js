@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generatePage = require('./utils/generatedMarkdown.js');
 
-// TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
         {
@@ -15,6 +13,19 @@ const questions = () => {
                     return true;
                 } else {
                     console.log('Please enter your project name!');
+                    return false;
+                }
+            }
+        },        
+        {
+            type: 'input',
+            name: 'repository',
+            message: 'What is the name of your repository?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid repository name!');
                     return false;
                 }
             }
@@ -59,6 +70,12 @@ const questions = () => {
             }
         },
         {
+            type: 'checkbox',
+            name: 'languages',
+            message: 'What was used for this project (Check all that apply)?',
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        },
+        {
             type: 'input',
             name: 'contributors',
             message: 'Who were your collaborators (List if any, otherwise leave blank)'
@@ -73,6 +90,19 @@ const questions = () => {
                     return true;
                 } else {
                     console.log('Please choose a license!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your github name?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid github name!');
                     return false;
                 }
             }
@@ -98,7 +128,6 @@ const writeFile = data => {
     });
 };
 
-// TODO: Create a function to initialize app
 questions()
     .then(answers => {
         return generatePage(answers);
@@ -109,5 +138,3 @@ questions()
     .catch(err => {
         console.log(err)
     })
- // Function call to initialize app
-// init();

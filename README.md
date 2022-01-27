@@ -1,21 +1,37 @@
-# adlkjdalk
-
-  ![License](https://img.shields.io/badge/license-MIT-green.svg)
-
+# My portfolio
 
   ## Description    
-  dalkadsjkld
+  personal portfolio
+
+  ## Table of Contents
+
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [Contributors](#Contributors)
+  - [Deployed](#Deployed)
+  - [Languages](#Languages)
+  - [License](#License)
 
 
   ## Installation 
-  dasl;kjdlka
+  akldjskdkjsad adlkdkjdlkjda adljdalkdsjk dalkjdlkjda adlkjdlkadld
 
 
   ## Usage 
-  daljkdalkd
+  To view my portfolio
 
 
   ## Contributors
-  akjdakljad 
+  N/A 
 
+  ## Deployed 
 
+  https://Jamesbmahoney.github.io/james-portfolio
+
+  ## Languages
+
+  JavaScript, HTML, CSS
+
+  ## License 
+
+  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
