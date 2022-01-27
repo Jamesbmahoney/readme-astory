@@ -1,37 +1,17 @@
-# My portfolio
+# README Generator
 
-  ## Description    
-  personal portfolio
+## Purpose 
+A Professional README generator built with Inquirer using node.js.  Using "node index" in the command line, answer a list of questions and a README will be built automatically from it.
 
-  ## Table of Contents
-
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Contributors](#Contributors)
-  - [Deployed](#Deployed)
-  - [Languages](#Languages)
-  - [License](#License)
+## Built With 
+* JS
+* Node.js
 
 
-  ## Installation 
-  akldjskdkjsad adlkdkjdlkjda adljdalkdsjk dalkjdlkjda adlkjdlkadld
+## Deployed Website
 
+https://jamesbmahoney.github.io/readme-astory/
 
-  ## Usage 
-  To view my portfolio
+## Demo
 
-
-  ## Contributors
-  N/A 
-
-  ## Deployed 
-
-  https://Jamesbmahoney.github.io/james-portfolio
-
-  ## Languages
-
-  JavaScript, HTML, CSS
-
-  ## License 
-
-  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![readme-gif](https://github.com/Jamesbmahoney/readme-astory/blob/main/readme.gif)
