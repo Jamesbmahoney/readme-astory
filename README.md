@@ -8,9 +8,9 @@ A Professional README generator built with Inquirer using node.js.  Using "node 
 * Node.js
 
 
-## Deployed Website
+## Link To walkthrough
 
-https://jamesbmahoney.github.io/readme-astory/
+https://watch.screencastify.com/v/F7GyMQK7NeZZr0SaIlt8
 
 ## Demo
 
